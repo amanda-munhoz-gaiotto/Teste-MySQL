@@ -1,0 +1,9 @@
+select	CL.nome Cliente, CA.cor Cor_Casa, BA.nome Bairro, CR.modelo Carro_Modelo
+from	cliente CL
+join	carro CR
+on		CR.fk_cliente = CL.id_cliente
+join	casa CA
+on		CA.fk_cliente = CL.id_cliente
+join	bairro BA
+on		BA.id_bairro = CA.fk_bairro
+;
